@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* Por padrão, as caixas são medidas por altura e largura, se eu adicionar preenchimento ele vai somar. Se eu usar o border-box, a altura não vai alterar se eu adicionar preenchimento */
+}
+body {
+  background-color: #09090a;
+  height: 100vh;
+  color: white;
+}
+
+header {
+  background-color: #09090a;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* toda largura do header e vai colocar espaço entre os elemnte, deixando um em cada ponta*/
+
+  padding: 48px; /* se eu colocar só um valor ele usa para todos os lados*/
+  position: fixed; /* posicionamento fixo dos elementos. Mesmo movento a barra, ele não muda*/
+  width: 100%;
+
+  /*border: 1px solid red;*/
+}
+
+button {
+  padding: 16px 24px; /* aplica no meu botão a distancia emcima e nas laterais */
+  border-radius: 8px; /* arrdondamento da borda*/
+  border: 1px solid #8b5cf6; /* tamanho, estilo e cor da borda*/
+  background-color: transparent; /* cor do fundo*/
+  color: white; /* cor do texto no botão*/
+
+  display: flex; /* deixa a disposição dos elementos flexiveis*/
+  align-items: center;
+  gap: 12px;
+
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits {
+  display: flex;
+  padding: 182px 48px 48px; /* preenchimento das laterais do elemento*/
+  width: fit-content; /* encaixa todo o conteudo na largura da pagina */
+}
+
+.habits {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* espaço entre os elementos quando tem display flex*/
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  /*caixa de classificação dos dias */
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  /* caixa de classificação do dia */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.day div {
+  margin-bottom: 8px;
+  font-family: "Roboto Mono";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 125%;
+  color: #a1a1aa;
+  position: sticky;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 64px;
+  height: 64px;
+  border: 2px solid #27272a;
+  border-radius: 8px;
+  background: #18181b;
+}
+
+input:checked {
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+
+/* pra aplicar alguma regra diferente pra mobile por exemplo. Se a tela foi até 570px eu vou executação*/
+@media (max-width: 570px) {
+  /* coloquei o registrar meu dia em um dia, e agora eu posso ignorar o texto se a tela for pequena, vai aparecer só o icone de + */
+
+  button div {
+    display: none;
+  }
+}

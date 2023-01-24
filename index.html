@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habits</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logo.svg" alt="Logomarca do aplicativo Habits" />
+
+      <button>
+        <img src="./assets/plus.svg" alt="icone sinal de mais roxo" />
+        <div>Registrar o meu dia</div>
+      </button>
+    </header>
+
+    <form id="form-habits">
+      <!-- o id é um atributo que da nome ao formes, como se fosse o rg, assim não pode ter outro forms com esse mesmo nome-->
+      <div class="habits">
+        <div class="habit" data-name="wakeUp">⏰</div>
+        <div class="habit" data-name="water">💧</div>
+        <div class="habit" data-name="food">🍓</div>
+        <div class="habit" data-name="exercise">🏋🏽‍♀️</div>
+        <div class="habit" data-name="readBible">📖</div>
+        <div class="habit" data-name="learningMusic">🎶</div>
+        <div class="habit" data-name="learningDev">👩🏽‍💻</div>
+        <div class="habit" data-name="trabalho">👩🏽‍🏭</div>
+        <div class="habit" data-name="minhaB">❤</div>
+      </div>
+
+      <div class="days"></div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
+    <!-- biblioteca-->
+    <script src="./script.js"></script>
+    <!-- src significa onde está o que eu quero-->
+  </body>
+</html>
